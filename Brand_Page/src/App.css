@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --red: #d01c28;
+  --gray: #2e2e2e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: antiquewhite;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 72px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(90vh - 82px);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10x;
+}
+
+.hero h1 {
+  font-weight: 600;
+  line-height: 80px;
+  font-size: 100px;
+}
+
+.hero p {
+  font-weight:400;
+  color: var(--gray);
+  max-width: 300px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 40px;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid grey;
+}
+
+.shopping p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .login-btn {
+    display: none; /* Optional: hide on mobile or relocate */
+  }
+}
